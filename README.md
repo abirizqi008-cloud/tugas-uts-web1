@@ -1,13 +1,12 @@
 # tugas-uts-web1
 
 ## Identitas 
-Nama: Muhammad Agusti Abi Rizqi  
-NIM: 312510042  
-Prodi. / Smt.: Teknik Informatika  / 3
-Kelas: I253A 
-Mata Kuliah: Pemrograman Web
-Dosen Pengampu: Agung Nugroho, S.Kom., M.Kom 
-Universitas Pelita Bangsa
+- **Nama** : Muhammad Agusti Abi Rizqi
+- **NIM** : 312510042
+- **Kelas** : I253A 
+- **Prodi / Semester** : Teknik Informatika / 3
+- **Mata Kuliah** : Pemrograman Web
+- **Dosen Pengampu** : Agung Nugroho, S.Kom., M.Kom
 
 # BUKU STORE – Aplikasi Toko Buku Online
 
