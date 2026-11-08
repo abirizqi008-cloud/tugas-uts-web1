@@ -144,11 +144,11 @@ Masukkan nomor DO tersebut pada halaman Tracking untuk melihat informasi pengiri
 
 ## 10. Pengembang
 
-**Nama:** Muhammad Agusti Abi Rizqi
-**NIM:** 312510042
-**Kelas:** I253A
-**Mata Kuliah:** Pemrograman Web 1  
-**Tugas:** Ujian Tengah Semester (UTS)
+- **Nama:** Muhammad Agusti Abi Rizqi
+- **NIM:** 312510042
+- **Kelas:** I253A
+- **Mata Kuliah:** Pemrograman Web 1  
+- **Tugas:** Ujian Tengah Semester (UTS)
 
 ---
 
