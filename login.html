@@ -1,26 +1,216 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Masuk | BukuKita</title><link rel="stylesheet" href="css/style.css"><style>/* Contoh CSS internal untuk elemen khusus halaman login */ .demo-note{border-left:3px solid #6d5ce8}</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Masuk | BukuKita</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Contoh CSS internal untuk elemen khusus halaman login */
+        .demo-note {
+            border-left: 3px solid #6d5ce8
+        }
+    </style>
 </head>
+
 <body class="auth-page">
-  <main class="auth-shell">
-    <section class="auth-card">
-      <a class="brand brand-large" href="login.html"><span class="brand-mark">B</span>BukuKita</a>
-      <p class="eyebrow">SELAMAT DATANG KEMBALI</p>
-      <h1>Masuk ke akunmu</h1><p class="muted">Lanjutkan perjalanan membaca dan kelola pesanan bukumu.</p>
-      <form id="loginForm" class="form-stack">
-        <label>Email<input type="email" id="loginEmail" placeholder="nama@email.com" required></label>
-        <label>Password<input type="password" id="loginPassword" placeholder="Masukkan password" required></label>
-        <button class="btn btn-primary btn-full" type="submit">Login <span>→</span></button>
-      </form>
-      <div class="auth-links"><button class="text-button" data-modal="forgotModal">Lupa Password?</button><span>Belum punya akun? <button class="text-button" data-modal="registerModal">Daftar</button></span></div>
-      <div class="demo-note"><strong>Akun demo</strong><br>Email: admin@bukukita.com<br>Password: buku123</div>
-    </section>
-    <aside class="auth-art"><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div><div class="book-illustration"><div class="book-cover"><span>THE ART OF<br>READING</span><small>BUKUKITA EDITION</small></div><div class="book-pages"></div></div><p class="art-quote">“Satu buku, sejuta kemungkinan.”</p><span class="art-caption">YOUR NEXT CHAPTER STARTS HERE</span></aside>
-  </main>
-  <div class="modal-backdrop" id="forgotModal"><section class="modal"><button class="modal-close" aria-label="Tutup">&times;</button><p class="eyebrow">BANTUAN AKUN</p><h2>Reset password</h2><p class="muted">Masukkan email akun. Simulasi ini akan menampilkan instruksi reset.</p><form id="forgotForm" class="form-stack"><label>Email<input type="email" id="forgotEmail" required placeholder="nama@email.com"></label><button class="btn btn-primary" type="submit">Kirim instruksi</button></form></section></div>
-  <div class="modal-backdrop" id="registerModal"><section class="modal"><button class="modal-close" aria-label="Tutup">&times;</button><p class="eyebrow">GABUNG BUKUKITA</p><h2>Buat akun baru</h2><form id="registerForm" class="form-stack"><label>Nama lengkap<input id="regName" required placeholder="Nama kamu"></label><label>Email<input type="email" id="regEmail" required placeholder="nama@email.com"></label><label>Password<input type="password" id="regPassword" minlength="6" required placeholder="Minimal 6 karakter"></label><button class="btn btn-primary" type="submit">Daftar sekarang</button></form></section></div>
-  <div id="toast" class="toast" role="status"></div><script src="js/data.js"></script><script src="js/app.js"></script>
-</body></html>
+
+    <main class="auth-shell">
+
+        <section class="auth-card">
+
+            <a class="brand brand-large" href="login.html">
+                <span class="brand-mark">B</span>BukuKita
+            </a>
+
+            <p class="eyebrow">SELAMAT DATANG KEMBALI</p>
+
+            <h1>Masuk ke akunmu</h1>
+
+            <p class="muted">
+                Lanjutkan perjalanan membaca dan kelola pesanan bukumu.
+            </p>
+
+            <form id="loginForm" class="form-stack">
+
+                <label>
+                    Email
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        placeholder="nama@email.com"
+                        required
+                    >
+                </label>
+
+                <label>
+                    Password
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Masukkan password"
+                        required
+                    >
+                </label>
+
+                <button class="btn btn-primary btn-full" type="submit">
+                    Login <span>→</span>
+                </button>
+
+            </form>
+
+            <div class="auth-links">
+                <button class="text-button" data-modal="forgotModal">
+                    Lupa Password?
+                </button>
+
+                <span>
+                    Belum punya akun?
+                    <button class="text-button" data-modal="registerModal">
+                        Daftar
+                    </button>
+                </span>
+            </div>
+
+            <div class="demo-note">
+                <strong>Akun demo</strong><br>
+                Email: admin@bukukita.com<br>
+                Password: buku123
+            </div>
+
+        </section>
+
+        <aside class="auth-art">
+
+            <div class="art-orbit orbit-one"></div>
+            <div class="art-orbit orbit-two"></div>
+
+            <div class="book-illustration">
+
+                <div class="book-cover">
+                    <span>
+                        THE ART OF<br>READING
+                    </span>
+
+                    <small>BUKUKITA EDITION</small>
+                </div>
+
+                <div class="book-pages"></div>
+
+            </div>
+
+            <p class="art-quote">
+                “Satu buku, sejuta kemungkinan.”
+            </p>
+
+            <span class="art-caption">
+                YOUR NEXT CHAPTER STARTS HERE
+            </span>
+
+        </aside>
+
+    </main>
+
+    <div class="modal-backdrop" id="forgotModal">
+
+        <section class="modal">
+
+            <button class="modal-close" aria-label="Tutup">
+                &times;
+            </button>
+
+            <p class="eyebrow">BANTUAN AKUN</p>
+
+            <h2>Reset password</h2>
+
+            <p class="muted">
+                Masukkan email akun. Simulasi ini akan menampilkan instruksi reset.
+            </p>
+
+            <form id="forgotForm" class="form-stack">
+
+                <label>
+                    Email
+                    <input
+                        type="email"
+                        id="forgotEmail"
+                        required
+                        placeholder="nama@email.com"
+                    >
+                </label>
+
+                <button class="btn btn-primary" type="submit">
+                    Kirim instruksi
+                </button>
+
+            </form>
+
+        </section>
+
+    </div>
+
+    <div class="modal-backdrop" id="registerModal">
+
+        <section class="modal">
+
+            <button class="modal-close" aria-label="Tutup">
+                &times;
+            </button>
+
+            <p class="eyebrow">GABUNG BUKUKITA</p>
+
+            <h2>Buat akun baru</h2>
+
+            <form id="registerForm" class="form-stack">
+
+                <label>
+                    Nama lengkap
+                    <input
+                        id="regName"
+                        required
+                        placeholder="Nama kamu"
+                    >
+                </label>
+
+                <label>
+                    Email
+                    <input
+                        type="email"
+                        id="regEmail"
+                        required
+                        placeholder="nama@email.com"
+                    >
+                </label>
+
+                <label>
+                    Password
+                    <input
+                        type="password"
+                        id="regPassword"
+                        minlength="6"
+                        required
+                        placeholder="Minimal 6 karakter"
+                    >
+                </label>
+
+                <button class="btn btn-primary" type="submit">
+                    Daftar sekarang
+                </button>
+
+            </form>
+
+        </section>
+
+    </div>
+
+    <div id="toast" class="toast" role="status"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>

@@ -1,2 +1,168 @@
+
 <!DOCTYPE html>
-<html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Pemesanan | BukuKita</title><link rel="stylesheet" href="css/style.css"></head><body><div class="app-layout"><aside class="sidebar"><a class="brand" href="dashboard.html"><span class="brand-mark">B</span>BukuKita</a><p class="side-label">MENU UTAMA</p><nav><a class="side-link" href="dashboard.html">▦ <span>Dashboard</span></a><a class="side-link" href="stok.html">▤ <span>Stok / Katalog</span></a><a class="side-link active" href="checkout.html">＋ <span>Pemesanan</span></a><a class="side-link" href="tracking.html">⌁ <span>Tracking</span></a><a class="side-link" href="laporan.html">▥ <span>Laporan</span></a><a class="side-link" href="transaksi.html">◷ <span>Histori Transaksi</span></a></nav><div class="sidebar-bottom"><div class="user-mini"><div class="avatar">A</div><div><strong>Admin BukuKita</strong><small>Administrator</small></div></div><button class="side-link logout-btn" data-logout>↪ <span>Keluar</span></button></div></aside><main class="main-content"><header class="topbar"><div><span class="eyebrow">ORDER MANAGEMENT</span><h2>Pemesanan Buku</h2></div><a href="transaksi.html" class="btn btn-outline">Riwayat transaksi</a></header><section class="page-intro"><h1>Buat pesanan baru</h1><p>Pilih buku, lengkapi informasi pemesan, lalu simpan transaksi.</p></section><div class="checkout-grid"><section class="table-card"><div class="table-top"><div><h3>Pilih koleksi</h3><p class="muted">Atur jumlah buku yang ingin dipesan.</p></div></div><div id="checkoutBooks" class="book-pick-list"></div></section><section class="table-card order-panel"><div class="table-top"><div><h3>Ringkasan pesanan</h3><p class="muted">Periksa kembali sebelum menyimpan.</p></div></div><div id="cartItems" class="cart-items"><p class="muted">Belum ada buku dipilih.</p></div><div class="total-line"><span>Total</span><strong id="cartTotal">Rp0</strong></div><form id="checkoutForm" class="form-stack"><h3>Informasi pemesan</h3><label>Nama pemesan<input id="buyerName" required placeholder="Nama lengkap"></label><label>Email<input id="buyerEmail" type="email" required placeholder="nama@email.com"></label><label>Alamat pengiriman<textarea id="buyerAddress" rows="2" required placeholder="Alamat lengkap"></textarea></label><div class="form-row"><label>Ekspedisi<select id="courier"><option>JNE</option><option>J&T Express</option><option>SiCepat</option><option>Pos Indonesia</option></select></label><label>Pembayaran<select id="payment"><option>Transfer Bank</option><option>COD</option><option>E-Wallet</option></select></label></div><button class="btn btn-primary btn-full" type="submit">Simpan pesanan →</button></form></section></div></main></div><div id="toast" class="toast" role="status"></div><script src="js/data.js"></script><script src="js/app.js"></script></body></html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan | BukuKita</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="app-layout">
+
+        <aside class="sidebar">
+            <a class="brand" href="dashboard.html">
+                <span class="brand-mark">B</span>
+                BukuKita
+            </a>
+
+            <p class="side-label">MENU UTAMA</p>
+
+            <nav>
+                <a class="side-link" href="dashboard.html">
+                    ▦ <span>Dashboard</span>
+                </a>
+
+                <a class="side-link" href="stok.html">
+                    ▤ <span>Stok / Katalog</span>
+                </a>
+
+                <a class="side-link active" href="checkout.html">
+                    ＋ <span>Pemesanan</span>
+                </a>
+
+                <a class="side-link" href="tracking.html">
+                    ⌁ <span>Tracking</span>
+                </a>
+
+                <a class="side-link" href="laporan.html">
+                    ▥ <span>Laporan</span>
+                </a>
+
+                <a class="side-link" href="transaksi.html">
+                    ◷ <span>Histori Transaksi</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="user-mini">
+                    <div class="avatar">A</div>
+
+                    <div>
+                        <strong>Admin BukuKita</strong>
+                        <small>Administrator</small>
+                    </div>
+                </div>
+
+                <button class="side-link logout-btn" data-logout>
+                    ↪ <span>Keluar</span>
+                </button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <span class="eyebrow">ORDER MANAGEMENT</span>
+                    <h2>Pemesanan Buku</h2>
+                </div>
+
+                <a href="transaksi.html" class="btn btn-outline">
+                    Riwayat transaksi
+                </a>
+            </header>
+
+            <section class="page-intro">
+                <h1>Buat pesanan baru</h1>
+                <p>Pilih buku, lengkapi informasi pemesan, lalu simpan transaksi.</p>
+            </section>
+
+            <div class="checkout-grid">
+
+                <section class="table-card">
+                    <div class="table-top">
+                        <div>
+                            <h3>Pilih koleksi</h3>
+                            <p class="muted">Atur jumlah buku yang ingin dipesan.</p>
+                        </div>
+                    </div>
+
+                    <div id="checkoutBooks" class="book-pick-list"></div>
+                </section>
+
+                <section class="table-card order-panel">
+                    <div class="table-top">
+                        <div>
+                            <h3>Ringkasan pesanan</h3>
+                            <p class="muted">Periksa kembali sebelum menyimpan.</p>
+                        </div>
+                    </div>
+
+                    <div id="cartItems" class="cart-items">
+                        <p class="muted">Belum ada buku dipilih.</p>
+                    </div>
+
+                    <div class="total-line">
+                        <span>Total</span>
+                        <strong id="cartTotal">Rp0</strong>
+                    </div>
+
+                    <form id="checkoutForm" class="form-stack">
+                        <h3>Informasi pemesan</h3>
+
+                        <label>
+                            Nama pemesan
+                            <input id="buyerName" required placeholder="Nama lengkap">
+                        </label>
+
+                        <label>
+                            Email
+                            <input id="buyerEmail" type="email" required placeholder="nama@email.com">
+                        </label>
+
+                        <label>
+                            Alamat pengiriman
+                            <textarea id="buyerAddress" rows="2" required placeholder="Alamat lengkap"></textarea>
+                        </label>
+
+                        <div class="form-row">
+                            <label>
+                                Ekspedisi
+                                <select id="courier">
+                                    <option>JNE</option>
+                                    <option>J&T Express</option>
+                                    <option>SiCepat</option>
+                                    <option>Pos Indonesia</option>
+                                </select>
+                            </label>
+
+                            <label>
+                                Pembayaran
+                                <select id="payment">
+                                    <option>Transfer Bank</option>
+                                    <option>COD</option>
+                                    <option>E-Wallet</option>
+                                </select>
+                            </label>
+                        </div>
+
+                        <button class="btn btn-primary btn-full" type="submit">
+                            Simpan pesanan →
+                        </button>
+                    </form>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <div id="toast" class="toast" role="status"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>

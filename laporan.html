@@ -1,2 +1,146 @@
+
 <!DOCTYPE html>
-<html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Laporan | BukuKita</title><link rel="stylesheet" href="css/style.css"></head><body><div class="app-layout"><aside class="sidebar"><a class="brand" href="dashboard.html"><span class="brand-mark">B</span>BukuKita</a><p class="side-label">MENU UTAMA</p><nav><a class="side-link" href="dashboard.html">▦ <span>Dashboard</span></a><a class="side-link" href="stok.html">▤ <span>Stok / Katalog</span></a><a class="side-link" href="checkout.html">＋ <span>Pemesanan</span></a><a class="side-link" href="tracking.html">⌁ <span>Tracking</span></a><a class="side-link active" href="laporan.html">▥ <span>Laporan</span></a><a class="side-link" href="transaksi.html">◷ <span>Histori Transaksi</span></a></nav><div class="sidebar-bottom"><div class="user-mini"><div class="avatar">A</div><div><strong>Admin BukuKita</strong><small>Administrator</small></div></div><button class="side-link logout-btn" data-logout>↪ <span>Keluar</span></button></div></aside><main class="main-content"><header class="topbar"><div><span class="eyebrow">BUSINESS INSIGHT</span><h2>Laporan Pemesanan</h2></div><button class="btn btn-outline" onclick="window.print()">Cetak laporan</button></header><section class="page-intro"><h1>Ringkasan toko</h1><p>Rekapitulasi data pesanan yang tersimpan di browser ini.</p></section><section class="stats-grid"><article class="stat-card"><div class="stat-icon purple">▣</div><p>Jumlah pesanan</p><h2 id="reportOrders">0</h2><small>Seluruh pesanan</small></article><article class="stat-card"><div class="stat-icon green">Rp</div><p>Total pendapatan</p><h2 id="reportRevenue">Rp0</h2><small>Akumulasi transaksi</small></article><article class="stat-card"><div class="stat-icon orange">▤</div><p>Jenis buku</p><h2 id="reportTitles">0</h2><small>Judul di katalog</small></article><article class="stat-card"><div class="stat-icon blue">◉</div><p>Unit terjual</p><h2 id="reportUnits">0</h2><small>Total kuantitas pesanan</small></article></section><section class="table-card"><div class="table-top"><div><h3>Pesanan terbaru</h3><p class="muted">Lima transaksi terakhir.</p></div></div><div class="table-wrap"><table><thead><tr><th>NO. DO</th><th>PEMESAN</th><th>TANGGAL</th><th>EKSPEDISI</th><th>TOTAL</th></tr></thead><tbody id="reportBody"></tbody></table></div></section></main></div><script src="js/data.js"></script><script src="js/app.js"></script></body></html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan | BukuKita</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="app-layout">
+
+        <aside class="sidebar">
+            <a class="brand" href="dashboard.html">
+                <span class="brand-mark">B</span>BukuKita
+            </a>
+
+            <p class="side-label">MENU UTAMA</p>
+
+            <nav>
+                <a class="side-link" href="dashboard.html">
+                    ▦ <span>Dashboard</span>
+                </a>
+
+                <a class="side-link" href="stok.html">
+                    ▤ <span>Stok / Katalog</span>
+                </a>
+
+                <a class="side-link" href="checkout.html">
+                    ＋ <span>Pemesanan</span>
+                </a>
+
+                <a class="side-link" href="tracking.html">
+                    ⌁ <span>Tracking</span>
+                </a>
+
+                <a class="side-link active" href="laporan.html">
+                    ▥ <span>Laporan</span>
+                </a>
+
+                <a class="side-link" href="transaksi.html">
+                    ◷ <span>Histori Transaksi</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="user-mini">
+                    <div class="avatar">A</div>
+
+                    <div>
+                        <strong>Admin BukuKita</strong>
+                        <small>Administrator</small>
+                    </div>
+                </div>
+
+                <button class="side-link logout-btn" data-logout>
+                    ↪ <span>Keluar</span>
+                </button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <span class="eyebrow">BUSINESS INSIGHT</span>
+                    <h2>Laporan Pemesanan</h2>
+                </div>
+
+                <button class="btn btn-outline" onclick="window.print()">
+                    Cetak laporan
+                </button>
+            </header>
+
+            <section class="page-intro">
+                <h1>Ringkasan toko</h1>
+                <p>Rekapitulasi data pesanan yang tersimpan di browser ini.</p>
+            </section>
+
+            <section class="stats-grid">
+
+                <article class="stat-card">
+                    <div class="stat-icon purple">▣</div>
+                    <p>Jumlah pesanan</p>
+                    <h2 id="reportOrders">0</h2>
+                    <small>Seluruh pesanan</small>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon green">Rp</div>
+                    <p>Total pendapatan</p>
+                    <h2 id="reportRevenue">Rp0</h2>
+                    <small>Akumulasi transaksi</small>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon orange">▤</div>
+                    <p>Jenis buku</p>
+                    <h2 id="reportTitles">0</h2>
+                    <small>Judul di katalog</small>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon blue">◉</div>
+                    <p>Unit terjual</p>
+                    <h2 id="reportUnits">0</h2>
+                    <small>Total kuantitas pesanan</small>
+                </article>
+
+            </section>
+
+            <section class="table-card">
+
+                <div class="table-top">
+                    <div>
+                        <h3>Pesanan terbaru</h3>
+                        <p class="muted">Lima transaksi terakhir.</p>
+                    </div>
+                </div>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>NO. DO</th>
+                                <th>PEMESAN</th>
+                                <th>TANGGAL</th>
+                                <th>EKSPEDISI</th>
+                                <th>TOTAL</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="reportBody"></tbody>
+                    </table>
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
