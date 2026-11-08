@@ -25,37 +25,37 @@ Beberapa fitur yang tersedia dalam aplikasi BukuKita adalah:
 1. **Login**  
    Pengguna dapat masuk ke aplikasi menggunakan email dan password yang telah tersedia pada data dummy.
 
-   <img src="images/Gambar1.jpg" width="250">
+   <img src="img/Gambar1.jpg" width="250">
 
 2. **Dashboard**  
    Menampilkan halaman utama aplikasi dan informasi ringkas toko buku.
 
-   <img src="images/Gambar2.jpg" width="250">
+    <img src="img/Gambar2.jpg" width="250">
 
 3. **Stok / Katalog Buku**  
    Menampilkan daftar buku beserta kode barang, nama buku, jenis buku, edisi, jumlah stok, harga, dan gambar sampul buku.
 
-   <img src="images/Gambar1.jpg" width="250">
+    <img src="img/Gambar3.jpg" width="250">
 
 4. **Checkout**  
    Menyediakan simulasi proses pemesanan buku dan perhitungan total pembayaran.
 
-   <img src="images/Gambar1.jpg" width="250">
+    <img src="img/Gambar4.jpg" width="250">
 
 5. **Tracking Pesanan**  
    Menampilkan informasi status pengiriman dan riwayat perjalanan paket berdasarkan nomor DO.
 
-   <img src="images/Gambar1.jpg" width="250">
+    <img src="img/Gambar5.jpg" width="250">
 
 6. **Laporan**  
    Menampilkan informasi ringkasan data transaksi.
 
-   <img src="images/Gambar1.jpg" width="250">
+    <img src="img/Gambar6.jpg" width="250">
 
 7. **Transaksi**  
    Menampilkan data transaksi yang telah dilakukan.
 
-   <img src="images/Gambar1.jpg" width="250">
+    <img src="img/Gambar7.jpg" width="250">
 
 ## 4. Teknologi yang Digunakan
 
